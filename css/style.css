@@ -1,0 +1,73 @@
+.fonte {
+    font-family:  'Incosolata';
+    font-size: 20px;
+    
+}
+
+.desc {
+    padding: 1px;
+    text-align: center; 
+    border:black thin solid;
+    font-size: 15px;
+    background: black;
+    
+}
+
+img{
+    border: red solid;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/*.body {
+    
+    margin: auto;
+    box-shadow: 0 0.3em 1em #000;
+    max-width: 60em;
+}
+
+html {
+    background-color: white;
+}
+*/
+
+.titulo_post{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+
+}
+
+.card_post{ 
+    background-image: url(/img/hero.jpg);
+    background-size: cover;
+    padding: 20rem 0 0;
+    
+
+    
+}
+
+.card-content{
+    background-color:black;
+}
+
+.card_post:hover{
+    zoom: 110% ;
+    scale: 100%;
+    
+    
+    
+}
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
