@@ -58,7 +58,7 @@
     --bs-body-font-weight: 400;
     --bs-body-line-height: 1.5;
     --bs-body-color: #f6f8f9;
-    --bs-body-bg: rgb(84, 83, 83);
+    --bs-body-bg: rgb(245, 243, 243);
     --bs-border-width: 1px;
     --bs-border-style: solid;
     --bs-border-color: #dee2e6;
@@ -4122,7 +4122,7 @@ fieldset:disabled .btn {
     --bs-nav-link-font-weight: ;
     --bs-nav-link-color: var(--bs-link-color);
     --bs-nav-link-hover-color: var(--bs-link-hover-color);
-    --bs-nav-link-disabled-color: #6c757d;
+    --bs-nav-link-disabled-color: #090909;
     display: flex;
     flex-wrap: wrap;
     padding-left:0;
@@ -4256,7 +4256,7 @@ fieldset:disabled .btn {
 .navbar {
     --bs-navbar-padding-x: 0;
     --bs-navbar-padding-y: 0.5rem;
-    --bs-navbar-color: rgba(250, 242, 242, 0.55);
+    --bs-navbar-color: rgba(234, 21, 21, 0.55);
     --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
     --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
     --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
@@ -4737,7 +4737,7 @@ fieldset:disabled .btn {
     --bs-navbar-color: rgba(255, 255, 255, 0.55);
     --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
     --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
-    --bs-navbar-active-color: #fff;
+    --bs-navbar-active-color: rgb(228, 25, 25);
     --bs-navbar-brand-color: #fff;
     --bs-navbar-brand-hover-color: #fff;
     --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
