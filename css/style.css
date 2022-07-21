@@ -8,13 +8,45 @@
 body{
     margin:0;
     padding:2rem;
-    background-color: grey;
-
+    background-color: rgb(91, 228, 228);
+    background-size: 110000%;
 }
+
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+
 
 .navbar{
     justify-content: space-between;
-    background-color: black;
+    background-color: rgba(255,255,255,0.1);
     color: #fff ;
     display: flex;
     justify-content:space-between;
@@ -22,6 +54,8 @@ body{
     margin-bottom: 2rem;
     border-radius: 10px;
     width: 100%;
+    box-shadow:20px 20px 40px black;
+
 }
 
 
@@ -60,10 +94,18 @@ a{
 
 
 main{
-    background-color:#fff;
-    padding: 2rem;
     width:100%;
-}
+    background-color: rgba(248, 248, 248, 0 );
+}   
+
+.main-posts{
+    background-color: rgba(255,255,255,0.1);
+    padding:4rem;
+    border-radius:10px;
+    position: relative;
+    width:70%;
+
+}   
 
 
 
@@ -82,6 +124,8 @@ main{
     border-bottom: black thin solid;
     font-size: 15px;
     background: black;
+    color: white;
+    
 }
 
 .sombra {
@@ -107,11 +151,22 @@ html {
 
 .titulo_post_redead2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
+    text-align: center;
 
 
 
 }
+
+.container-principal{
+    background-color: rgba(242, 245, 246,0.0);
+    padding: 2rem;
+    border-radius: 10px;
+    width:100%
+   /* box-shadow: 0 20px 20px 20px rgba(0,0,0,0.5);*/
+   /*box-shadow: 20px 20px 20px */
+
+}
+
 
 .card-principal_1,
 .link_1 {
@@ -125,6 +180,10 @@ html {
     border-width: 7px;
     position: relative;
     margin:0;
+    z-index: 0;
+    backdrop-filter: blur(20rem);
+    box-shadow:20px 20px 20px black;
+
     
 
 
@@ -204,6 +263,8 @@ html {
     object-fit: cover;
     border-width: 7px;
     position: relative;
+    box-shadow:20px 20px 20px black;
+
 
 
 }
@@ -219,6 +280,8 @@ html {
     object-fit: cover;
     border-width: 7px;
     position: relative;
+    box-shadow:20px 20px 20px black;
+
 
 
 
@@ -245,11 +308,9 @@ html {
     border-width: black 30px;
     height: 150px;
     width: 100%;
-    background-color: rgb(203, 223, 240);
+    background-color: rgb(203, 223, 240,0.1);
+    backdrop-filter: blur(10rem);
     margin: 2rem 0
-
-
-    
 }
 
 .texto_anuncio {
@@ -257,14 +318,20 @@ html {
     text-align: center;
     text-transform: uppercase;
     font-size: 40px;
+
 }
 
 /* bloco de notícias */
 
-.titulo_noticias{
+.link-noticias{
     font-size: 40px;
     color: black;
     margin: 2rem 0;
+    box-shadow:20px 20px 40px black;
+    border-radius:10px;
+    border-style: solid white;
+    border-width: 10px;
+
 
 }
 
@@ -278,8 +345,7 @@ html {
 
 
 .bloco-noticias{
-    background-color: #fff;
-    width: 800px;
+    width: 60%;
     margin:0;
     height: 800px;
     border-width: 0.5px;
@@ -293,15 +359,17 @@ html {
     border-radius: 10px;
     border-top-left-radius: 10px;
     border-color: black;
-    gap:10px;
-    padding:0;
+    gap:30px;
+    padding:2rem;
+    background-color: rgb(255, 255, 255,0);
+
 }
 
 /* Bloco_1 Notícias  */
 
 .conteudo-bloco1{
     display: grid;
-    background-color: rgb(250, 247, 247);
+    background-color: rgb(250, 247, 247,0.5);
     position: relative;
     border-radius:10px;
     grid-area: a;
@@ -311,11 +379,13 @@ html {
     border-style: groove;
     margin: 0;
     padding: 1rem 2rem;
+    box-shadow:20px 20px 20px 
+
     
 }
 
 .imagens-noticias1{
-    max-width: 300px;
+    max-width: 70%;
     bottom: 0;
     position: absolute;
     margin: 1rem 2rem;
@@ -331,6 +401,7 @@ html {
 
 .p3-noticia_bloco_1{
     position: absolute;
+    font-size:20px;
     color: black;
     top: 12rem;
     margin:1rem 2rem;
@@ -360,7 +431,6 @@ p{
 /* bloco_2  Notícias */ 
 
 .conteudo-bloco2{
-    background-color:#fff;
     margin: 0rem;
     height: 300px;
     border-radius: 10px;
@@ -368,7 +438,7 @@ p{
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
     display: grid;
-    gap: 10px;
+    gap: 30px;
     position: relative;
     grid-template-areas: "f"
                          "g";
@@ -382,7 +452,8 @@ p{
     border-radius:10px;
     grid-area: f;
     padding: 1rem 2rem;
-    background-color: rgb(250, 247, 247);
+    background-color: rgb(250, 247, 247,0.5);
+    box-shadow:20px 20px 20px 
 
 
 
@@ -391,15 +462,17 @@ p{
 .imagens-noticias2_f,.imagens-noticias2_g{
     top: 0;
     right: 0;
-    max-width:35%;
-    min-width:35%;
+    max-width:25%;
     position: absolute;
-    padding: 1rem 2rem;
-    grid-area: f;
 
 }
 .imagens-noticias2_g{
     grid-area: g;
+}
+
+.imagens-noticias2_f{
+    grid-area: f;
+
 }
 
 .p1-noticia_bloco_2{
@@ -413,8 +486,9 @@ p{
 
 .p2-noticia_bloco_2{
     position: absolute;
+    font-size:20px;
     color: black;
-    margin: 2rem 11rem 0rem 0rem;
+    margin: 2rem 5rem 0rem 0rem;
     grid-area: f;
     
     
@@ -436,7 +510,8 @@ p{
     border-radius:10px;
     grid-area: g;
     padding: 1rem 2rem;
-    background-color: rgb(250, 247, 247);
+    background-color: rgb(250, 247, 247,0.5);
+    box-shadow:20px 20px 20px 
 
 
 }
@@ -469,8 +544,10 @@ p{
     border-style: groove;
     display: grid;
     grid-area: c;
-    border-width: 2px;
+    border-width: 1px;
     height: 400px;
+    box-shadow:20px 20px 20px 
+
     
 
 }
@@ -532,18 +609,17 @@ p{
     justify-content: center;
 }
 
-.secao-videos{
-    width: 100%;
-    
-}
 
-.titulo-videos,.link-videos{
+
+.link-videos{
     color: black;
-    position: relative;
     margin: 0;
     text-decoration-line: none;
     font-size: 30px;
     text-transform: capitalize;
+    box-shadow:20px 20px 40px black;
+    border-radius: 10px;
+
 
 }
 
@@ -596,10 +672,16 @@ h3{
 
 /*páginas dos posts*/
 
-.img-postagens{
-    position: relative;
-
+.img{
+    position: absolute;
+    
 }
+
+.container-1{
+    position: relative;
+}
+
+
 
 
 /*seção de vídeos*/
@@ -635,7 +717,7 @@ h3{
 /* Footer(Início) */
 
 .footer{
-    background-color: blue;
+    background-color: rgb(248, 248, 252,0);
     margin:10rem 0 0;
     text-align: center;
     border-radius:10px;
@@ -651,19 +733,25 @@ h3{
 /* Footer (Término) */
 
 .texto-principal{   
-    font-size: 30px;
-    margin: 2rem 8rem 2rem 8rem;
+    font-size: 20px;
+    background-color: rgba(255,255,255,0.4);
+    padding: 2rem;
+}
+
+.texto-principal-1{
+    font-size: 20px;
+    background-color: rgba(255,255,255,0.4);
+    padding: 2rem;
+    margin-left: 29rem;
 }
 
 
 
 /* >>> Ínicio dos parâmetros responsivos <<< */
 
-@media(max-width:768px){
+@media(max-width:720px){
     body,main{
-        margin:0;
-        padding:0;
-
+        width: 100%;
     }
 
     .container-principal,
@@ -672,27 +760,75 @@ h3{
     .card-principal_3
     {
         display: block; 
-        margin: 1rem 0;
-        padding: 0;
         width: 100%;
-        
+        padding: 0;
+        margin-bottom:25px;
     }
-    .card-principal_1{
-        background-size: cover; 
-
-    }
+    
+    
 
     .bloco-noticias{
         display: block;
         width: 100%;
+        padding: 0;
+        
+    }
+
+    .conteudo-bloco1{
+        height: 60%;
+        margin-bottom:20px
+    }
+
+    
+
+    .imagens-noticias1{
+        max-width: 40%;
+    }
+
+    .imagens-noticias2_f{
+        width: 100%;
+
+    }
+
+    .p2-noticia_bloco_1{
+        font-size: 20px;
+    }
+
+    .p3-noticia_bloco_1{
+        font-size: 17px;
+    }
+
+    .p2-noticia_bloco_2{
+        font-size: 18px;
     }
 
     .navbar,.nav-itens{
-        display: flex;
-        flex-direction: column;
+        display:block;
+        width: 100%;
+    }
+
+    .secao-videos{
+        display: block;
+        margin-top:25rem;
+        width: 100%;
+    }
+
+    .bloco-1-video{
+        width:100%;
+        margin-bottom:20px
     }
 
   
 
+    
+}
+
+.post{
+    margin: 0;    
+}
+
+/*Resposividade artigos*/
+
+@media (max-width:720px){
     
 }
